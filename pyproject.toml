@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "strand"
+version = "0.1.0"
+description = "A Python library for efficient graph computations and machine learning"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    { name = "Strand Core Team" }
+]
+dependencies = [
+    "torch>=2.0.0",
+    "networkx>=3.0",  # For visualization
+    "matplotlib>=3.0.0",  # For visualization
+    "scikit-learn>=1.0.0",  # For spectral embedding
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=strand"
+
+[tool.ruff]
+line-length = 79
+target-version = "py38" 

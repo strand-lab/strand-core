@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Temporary folder for development notes and communication
+temp/
+.temp/
+
 # C extensions
 *.so
 
